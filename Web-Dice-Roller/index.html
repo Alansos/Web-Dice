@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dice Roller Game</h1>
+    <p>Click "Roll Dice" or press Enter to roll the dice.</p>
+
+    <table>
+        <tr>
+            <th>Die 1</th>
+            <th>Die 2</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="die1" readonly style="text-align:right;"></td>
+            <td><input type="number" id="die2" readonly style="text-align:right;"></td>
+            <td><input type="number" id="total" readonly style="text-align:right;"></td>
+        </tr>
+    </table>
+
+    <button id="rollBtn" onclick="rollDice()" autofocus>Roll Dice</button>
+
+    <script>
+    function rollDice() {
+        const die1 = Math.floor(Math.random() * 6) + 1;
+        const die2 = Math.floor(Math.random() * 6) + 1;
+        const total = die1 + die2;
+
+        document.getElementById('die1').value = die1;
+        document.getElementById('die2').value = die2;
+        document.getElementById('total').value = total;
+    }
+
+    window.onload = rollDice;
+    </script>
+</body>
+</html>

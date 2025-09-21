@@ -1,0 +1,16 @@
+input {
+    width: 50px;
+    text-align: right; /* already right-justified */
+    font-size: 1.2em;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* centers headings, paragraphs, table, button text */
+    margin: 40px;
+}
+
+table {
+    margin: 20px auto; /* top/bottom margin 20px, left/right auto = centers table */
+    border-collapse: collapse;
+}
